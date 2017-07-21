@@ -29,12 +29,14 @@ RUN apk --update \
     php7-zlib \
     && rm -f /var/cache/apk/* \
     && mkdir /run/apache2 \
-    && mkdir -p /opt/utils
+    && mkdir -p /opt/utils \
+    && mkdir /htdocs
 
 EXPOSE 80
 
 ADD start.sh /opt/utils/
 
 RUN chmod +x /opt/utils/start.sh
+RUN /opt/utils/start.sh
 
-ENTRYPOINT ["/opt/utils/start.sh"]
+ENTRYPOINT ["httpd","-D","FOREGROUND"]

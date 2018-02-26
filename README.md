@@ -1,7 +1,7 @@
 ## alpine-apache-php
 Alpine based image with apache2 and php7
 
-[![](https://badge.imagelayers.io/eriksoderblom/alpine-apache-php:latest.svg)](https://imagelayers.io/?images=eriksoderblom/alpine-apache-php:latest)
+[![](https://images.microbadger.com/badges/image/eriksoderblom/alpine-apache-php.svg)](https://microbadger.com/images/eriksoderblom/alpine-apache-php)
 
 # Build
 `docker build -t [image-name]:latest .`

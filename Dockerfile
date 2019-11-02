@@ -1,4 +1,4 @@
-FROM alpine:3.8
+FROM alpine:3.10
 LABEL maintainer="erik.soderblom@gmail.com"
 LABEL description="Alpine based image with apache2 and php7."
 
@@ -26,9 +26,7 @@ RUN apk --update \
     php7-phar \
     php7-xml \
     php7-xmlrpc \
-    php7-zlib \
     && rm -f /var/cache/apk/* \
-    && mkdir /run/apache2 \
     && mkdir -p /opt/utils \
     && mkdir /htdocs
 

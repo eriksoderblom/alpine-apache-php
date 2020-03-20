@@ -10,6 +10,7 @@ RUN apk --update \
     php7-bcmath \
     php7-bz2 \
     php7-calendar \
+    php7-common \
     php7-ctype \
     php7-curl \
     php7-dom \
@@ -24,6 +25,7 @@ RUN apk --update \
     php7-pdo_pgsql \
     php7-pdo_sqlite \
     php7-phar \
+    php7-session \
     php7-xml \
     php7-xmlrpc \
     && rm -f /var/cache/apk/* \

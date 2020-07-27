@@ -39,4 +39,6 @@ ADD start.sh /opt/utils/
 RUN chmod +x /opt/utils/start.sh
 RUN /opt/utils/start.sh
 
+HEALTHCHECK CMD wget -q --no-cache --spider localhost/index.html
+
 ENTRYPOINT ["httpd","-D","FOREGROUND"]

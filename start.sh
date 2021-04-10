@@ -13,5 +13,5 @@ sed -i 's/#LoadModule\ deflate_module/LoadModule\ deflate_module/' /etc/apache2/
 sed -i 's/#LoadModule\ expires_module/LoadModule\ expires_module/' /etc/apache2/httpd.conf
 
 # Modify php.ini settings
-sed -i 's/memory_limit = .*/memory_limit = 256M/' /etc/php7/php.ini
-sed -i "s/^;date.timezone =$/date.timezone = \"Europe\/Stockholm\"/" /etc/php7/php.ini
+sed -i 's/memory_limit = .*/memory_limit = 256M/' /etc/php8/php.ini
+sed -i "s/^;date.timezone =$/date.timezone = \"Europe\/Stockholm\"/" /etc/php8/php.ini

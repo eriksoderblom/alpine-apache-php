@@ -1,5 +1,5 @@
 ## alpine-apache-php
-Alpine based image with apache2 and php7
+Alpine based image with apache2 and php8
 
 [![](https://images.microbadger.com/badges/image/eriksoderblom/alpine-apache-php.svg)](https://microbadger.com/images/eriksoderblom/alpine-apache-php)
 

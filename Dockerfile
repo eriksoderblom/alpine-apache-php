@@ -27,16 +27,12 @@ RUN apk --no-cache --update \
     php8-phar \
     php8-session \
     php8-xml \
-    && mkdir -p /opt/utils \
     && mkdir /htdocs
 
-EXPOSE 80
+EXPOSE 80 443
 
-ADD start.sh /opt/utils/
+ADD docker-entrypoint.sh /
 
-RUN chmod +x /opt/utils/start.sh
-RUN /opt/utils/start.sh
+HEALTHCHECK CMD wget -q --no-cache --spider localhost
 
-HEALTHCHECK CMD wget -q --no-cache --spider localhost/index.html
-
-ENTRYPOINT ["httpd","-D","FOREGROUND"]
+ENTRYPOINT ["/docker-entrypoint.sh"]

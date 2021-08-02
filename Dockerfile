@@ -3,8 +3,9 @@ LABEL maintainer="erik.soderblom@gmail.com"
 LABEL description="Alpine based image with apache2 and php8."
 
 # Setup apache and php
-RUN apk --update \
+RUN apk --no-cache --update \
     add apache2 \
+    apache2-ssl \
     curl \
     php8-apache2 \
     php8-bcmath \
@@ -26,7 +27,6 @@ RUN apk --update \
     php8-phar \
     php8-session \
     php8-xml \
-    && rm -f /var/cache/apk/* \
     && mkdir -p /opt/utils \
     && mkdir /htdocs
 

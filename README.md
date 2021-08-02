@@ -11,7 +11,7 @@ docker build -t alpine-apache-php:latest .
 ## Usage
 
 ```sh
-docker run --detach 
+docker run --detach \
     --name alpine-apache-php \
     --hostname example.com \
     --publish 80:80 \

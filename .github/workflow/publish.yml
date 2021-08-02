@@ -9,7 +9,7 @@ jobs:
   push_to_registry:
     runs-on: ubuntu-latest
     steps:
-      - uses: bhowell2/github-substring-action
+      - uses: bhowell2/github-substring-action@v1
         id: tagid
         with:
           value: ${{ env.GITHUB_REF }}

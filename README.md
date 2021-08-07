@@ -2,9 +2,7 @@
 
 Alpine based image with apache2 and php8
 
-You can find a built image at Docker hub:
-https://hub.docker.com/r/eriksoderblom/alpine-apache-php
-or use the image: *eriksoderblom/alpine-apache-php:latest*
+You can find a built image at [Docker Hub](https://hub.docker.com/r/eriksoderblom/alpine-apache-php) or use the image: *eriksoderblom/alpine-apache-php:latest*
 
 ## Define environnement variables (optional)
 

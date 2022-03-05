@@ -2,7 +2,7 @@
 
 Alpine based image with apache2 and php8
 
-You can use either of these build images:  
+You can use either of these built images:  
 *ghcr.io/eriksoderblom/alpine-apache-php:latest*  
 *eriksoderblom/alpine-apache-php:latest*
 

@@ -22,6 +22,5 @@ jobs:
     - name: Build the Docker image
       run: |
         docker build . --tag ghcr.io/eriksoderblom/alpine-apache-php:latest --tag ghcr.io/eriksoderblom/alpine-apache-php:$(date +%y.%m)
-        docker run ghcr.io/eriksoderblom/alpine-apache-php:latest
         docker push ghcr.io/eriksoderblom/alpine-apache-php:latest
         docker push ghcr.io/eriksoderblom/alpine-apache-php:$(date +%y.%m)

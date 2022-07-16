@@ -22,6 +22,6 @@ jobs:
 
     - name: Build the Docker image
       run: |
-        docker build . --tag ghcr.io/eriksoderblom/alpine-apache-php:latest --tag ghcr.io/eriksoderblom/alpine-apache-php:$(git describe --tags --abbrev=0)
+        docker build --no-cache . --tag ghcr.io/eriksoderblom/alpine-apache-php:latest --tag ghcr.io/eriksoderblom/alpine-apache-php:$(git describe --tags --abbrev=0)
         docker push ghcr.io/eriksoderblom/alpine-apache-php:latest
         docker push ghcr.io/eriksoderblom/alpine-apache-php:$(git describe --tags --abbrev=0)

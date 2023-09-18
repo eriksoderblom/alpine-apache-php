@@ -7,26 +7,26 @@ RUN apk --no-cache --update \
     add apache2 \
     apache2-ssl \
     curl \
-    php81-apache2 \
-    php81-bcmath \
-    php81-bz2 \
-    php81-calendar \
-    php81-common \
-    php81-ctype \
-    php81-curl \
-    php81-dom \
-    php81-gd \
-    php81-iconv \
-    php81-mbstring \
-    php81-mysqli \
-    php81-mysqlnd \
-    php81-openssl \
-    php81-pdo_mysql \
-    php81-pdo_pgsql \
-    php81-pdo_sqlite \
-    php81-phar \
-    php81-session \
-    php81-xml \
+    php82-apache2 \
+    php82-bcmath \
+    php82-bz2 \
+    php82-calendar \
+    php82-common \
+    php82-ctype \
+    php82-curl \
+    php82-dom \
+    php82-gd \
+    php82-iconv \
+    php82-mbstring \
+    php82-mysqli \
+    php82-mysqlnd \
+    php82-openssl \
+    php82-pdo_mysql \
+    php82-pdo_pgsql \
+    php82-pdo_sqlite \
+    php82-phar \
+    php82-session \
+    php82-xml \
     && mkdir /htdocs
 
 EXPOSE 80 443

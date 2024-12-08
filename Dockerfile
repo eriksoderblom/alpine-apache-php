@@ -1,4 +1,4 @@
-FROM alpine:3.20
+FROM alpine:3.21
 LABEL maintainer="erik.soderblom@gmail.com"
 LABEL description="Alpine based image with apache2 and php8."
 
@@ -7,26 +7,26 @@ RUN apk --no-cache --update \
     add apache2 \
     apache2-ssl \
     curl \
-    php83-apache2 \
-    php83-bcmath \
-    php83-bz2 \
-    php83-calendar \
-    php83-common \
-    php83-ctype \
-    php83-curl \
-    php83-dom \
-    php83-gd \
-    php83-iconv \
-    php83-mbstring \
-    php83-mysqli \
-    php83-mysqlnd \
-    php83-openssl \
-    php83-pdo_mysql \
-    php83-pdo_pgsql \
-    php83-pdo_sqlite \
-    php83-phar \
-    php83-session \
-    php83-xml \
+    php84-apache2 \
+    php84-bcmath \
+    php84-bz2 \
+    php84-calendar \
+    php84-common \
+    php84-ctype \
+    php84-curl \
+    php84-dom \
+    php84-gd \
+    php84-iconv \
+    php84-mbstring \
+    php84-mysqli \
+    php84-mysqlnd \
+    php84-openssl \
+    php84-pdo_mysql \
+    php84-pdo_pgsql \
+    php84-pdo_sqlite \
+    php84-phar \
+    php84-session \
+    php84-xml \
     && mkdir /htdocs
 
 EXPOSE 80 443

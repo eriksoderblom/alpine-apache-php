@@ -32,6 +32,7 @@ RUN apk --no-cache --update \
 EXPOSE 80 443
 
 ADD docker-entrypoint.sh /
+ADD custom-log.conf /etc/apache2/conf.d/custom-log.conf
 
 HEALTHCHECK CMD wget -q --no-cache --spider localhost
 

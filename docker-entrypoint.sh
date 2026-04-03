@@ -20,8 +20,7 @@ sed -i 's#Directory "/var/www/localhost/htdocs"#Directory "/htdocs"#g' /etc/apac
 sed -i 's#AllowOverride None#AllowOverride All#' /etc/apache2/httpd.conf
 
 # Change TransferLog after ErrorLog
-sed -i 's#^ErrorLog .*#ErrorLog "/dev/stderr"\nTransferLog "/dev/stdout"#g' /etc/apache2/httpd.conf
-sed -i 's#CustomLog .* combined#CustomLog "/dev/stdout" combined#g' /etc/apache2/httpd.conf
+sed -i 's#^ErrorLog .*#ErrorLog "/dev/stderr"#g' /etc/apache2/httpd.conf
 
 # SSL DocumentRoot and Log locations
 sed -i 's#^ErrorLog .*#ErrorLog "/dev/stderr"#g' /etc/apache2/conf.d/ssl.conf

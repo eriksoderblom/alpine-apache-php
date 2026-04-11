@@ -12,6 +12,15 @@ PHP_MEMORY_LIMIT="${PHP_MEMORY_LIMIT:-256M}"
 
 echo 'Updating configurations'
 
+# Generate new keys for HTTPS
+openssl genrsa -out /etc/ssl/apache2/server.key 2048
+openssl req -new -x509 -key /etc/ssl/apache2/server.key \
+  -out /etc/ssl/apache2/server.crt -subj "/CN=${HTTPS_SERVER_NAME}"
+openssl req -new -x509 -nodes -sha1 -days 365 \
+  -key /etc/ssl/apache2/server.key \
+  -out /etc/ssl/apache2/server.pem \
+  -subj "/CN=${HTTPS_SERVER_NAME}" -extensions usr_cert
+
 # Change Server Admin, Name, Document Root
 sed -i "s/ServerAdmin\ you@example.com/ServerAdmin\ ${SERVER_ADMIN}/" /etc/apache2/httpd.conf
 sed -i "s/#ServerName\ www.example.com:80/ServerName\ ${HTTP_SERVER_NAME}/" /etc/apache2/httpd.conf

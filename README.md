@@ -40,6 +40,28 @@ docker run --detach \
     eriksoderblom/alpine-apache-php:latest
 ```
 
+#### Compose example
+```dockerfile
+services:
+    alpine-apache-php:
+        container_name: alpine-apache-php
+        hostname: www.example.com
+        environment:
+            - SERVER_ADMIN="admin@www.example.com"
+            - HTTP_SERVER_NAME="www.example.com"
+            - HTTPS_SERVER_NAME="www.example.com"
+            - TZ="UTC"
+            - PHP_MEMORY_LIMIT="256M"
+            - LOG_LEVEL="error"
+        ports:
+            - '80:80'
+            - '443:443'
+        restart: unless-stopped
+        volumes:
+            - '/docker/data/www:/htdocs'
+        image: 'eriksoderblom/alpine-apache-php:latest'
+```
+
 #### Customized run
 
 ```sh

@@ -1,12 +1,14 @@
 # alpine-apache-php
 
-Alpine based image with apache2 and php8
+Alpine based image with apache2 and php8  
+
+2026-10-22: updated php to 8.5.12  
 
 You can use either of these built images:  
 *ghcr.io/eriksoderblom/alpine-apache-php:latest*  
-*eriksoderblom/alpine-apache-php:latest*
+*eriksoderblom/alpine-apache-php:latest*  
 
-You can find other (older versions) at [Docker Hub](https://hub.docker.com/r/eriksoderblom/alpine-apache-php)
+The image is also avaliable at [Docker Hub](https://hub.docker.com/r/eriksoderblom/alpine-apache-php)  
 
 ## Define environnement variables (optional)
 
